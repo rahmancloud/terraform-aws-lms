@@ -1,2 +1,2 @@
 # terraform-aws-lms
-create lms in AWS using Terraform
+Create lms in AWS using Terraform
