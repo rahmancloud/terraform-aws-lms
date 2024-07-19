@@ -6,6 +6,14 @@ terraform {
     }
   }
 
+  cloud {
+    organization = "rahmancloud"
+
+    workspaces {
+      name = "terraform-aws-lms"
+    }
+  }
+
   required_version = ">= 1.2.0"
 }
 
