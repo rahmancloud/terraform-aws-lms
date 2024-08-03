@@ -33,6 +33,19 @@ resource "aws_instance" "Bitnami_LMS" {
   }
 }
 
+resource "aws_instance" "Bitnami_LMS" {
+  ami           = "ami-0bbdb939ba1170846"
+  instance_type = "t2.micro"
+  key_name      = "macbook"
+
+  vpc_security_group_ids = [aws_security_group.LMS_SG.id]
+
+  tags = {
+    Name = "Bitnami_LMS_Restore"
+  }
+}
+
+
 resource "aws_security_group" "LMS_SG" {
   ingress {
     description = "SSH"
