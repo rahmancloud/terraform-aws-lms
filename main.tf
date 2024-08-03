@@ -45,6 +45,17 @@ resource "aws_instance" "Bitnami_LMS_Restore" {
   }
 }
 
+resource "aws_instance" "temp" {
+  ami           = "ami-0bbdb939ba1170846"
+  instance_type = "t2.micro"
+  key_name      = "macbook"
+
+  vpc_security_group_ids = [aws_security_group.LMS_SG.id]
+
+  tags = {
+    Name = "temp"
+  }
+}
 
 resource "aws_security_group" "LMS_SG" {
   ingress {
