@@ -34,7 +34,7 @@ resource "aws_instance" "Bitnami_LMS" {
 }
 
 resource "aws_instance" "Bitnami_LMS_Restore" {
-  ami           = "ami-0e8b5bba933fd0f97"
+  ami           = "ami-0c185732ad1b6169b"
   instance_type = "t2.micro"
   key_name      = "macbook"
 
@@ -51,7 +51,7 @@ resource "aws_security_group" "LMS_SG" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["175.136.183.186/32"]
   }
 
   ingress {
@@ -59,7 +59,7 @@ resource "aws_security_group" "LMS_SG" {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["175.136.183.186/32"]
   }
 
   egress {
