@@ -34,7 +34,7 @@ resource "aws_instance" "Bitnami_LMS" {
 }
 
 resource "aws_instance" "Bitnami_LMS_Restore" {
-  ami           = "ami-0bbdb939ba1170846"
+  ami           = "ami-0e8b5bba933fd0f97"
   instance_type = "t2.micro"
   key_name      = "macbook"
 
