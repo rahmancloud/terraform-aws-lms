@@ -1,6 +1,12 @@
 # description: backup restore notes
 # reference: https://docs.moodle.org/404/en/Site_backup
 
+# set variables
+export HOSTNAME=''
+export DBUSER=''
+export DBNAME=''
+export DBPASSWORD=''
+
 # get password for moodle "user" and database user "admin"
 sudo cat /home/bitnami/bitnami_credentials
 
