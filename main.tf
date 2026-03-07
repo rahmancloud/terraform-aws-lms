@@ -62,6 +62,14 @@ resource "aws_security_group" "LMS_SG" {
     cidr_blocks = ["175.136.183.186/32"]
   }
 
+  ingress {
+    description = "HTTPS"
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   egress {
     from_port        = 0
     to_port          = 0
